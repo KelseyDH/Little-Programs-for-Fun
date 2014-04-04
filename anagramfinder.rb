@@ -30,20 +30,14 @@ class AnagramFinder
     print combinationarray
     sortedpermutation = combinationarray.sort{ |x,y| y <=> x}
     
-    print sortedpermutation
-
     numberindex = sortedpermutation.index(@starting_number.to_s)
-
-    puts numberindex
 
     if numberindex == 0
         nextnum = @starting_number
-        puts nextnum
       else
         nextnum = sortedpermutation.fetch(numberindex-1)
-        puts nextnum
       end
-
+      next_highest = nextnum
   end
   
 
