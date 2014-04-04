@@ -1,7 +1,7 @@
 n = gets.chomp.to_f
 array = []
 
-1.upto(n) { |x|
+0.upto(n) { |x|
 array.push(x)
 }
 
@@ -17,20 +17,20 @@ puts "."
 
 # *(n/2) == x=1
 
-
+array.delete(0)
 while array.count >= 1
   y = 0
   puts ""
   print array
   array.each do |x|
-    y += 1
-    if y == 1
-      array.delete(x)
-      y -= 1
+      y += 1
+      if y == 1 && x != 0
+        array.delete(x)
+        y -= 1
 
-    else
-      ""
-    end
+      else
+        ""
+      end
   end
 end
 
